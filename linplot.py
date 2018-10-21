@@ -11,20 +11,21 @@ mfc_name = "DUT"
 meter_name = "3458A"
 real_row = 2
 
-if len(sys.argv) < 2:
-    print("Need an argument! <file_name> [<data_row_number>] [<dut_name>] [<meter_name>]")
+if len(sys.argv) < 3:
+    print("Need an argument!\n%s <file_name> <out_fn> [<data_row_number>] [<dut_name>] [<meter_name>]" % sys.argv[0])
     quit()
 
-if len(sys.argv) >= 3:
-    real_row = int(sys.argv[2])
-
 if len(sys.argv) >= 4:
-    mfc_name = sys.argv[3]
+    real_row = int(sys.argv[3])
 
-if len(sys.argv) == 5:
-    meter_name = sys.argv[4]
+if len(sys.argv) >= 5:
+    mfc_name = sys.argv[4]
+
+if len(sys.argv) == 6:
+    meter_name = sys.argv[5]
 
 fn = sys.argv[1]
+out_fn = sys.argv[2]
 
 ideal = []
 real = []
@@ -52,12 +53,15 @@ inl_span = inl_delta / 2.0
 print(mfc_name + " vs " + meter_name + " INL Max: %f, Min %f" % (inl_max , inl_min))
 print(mfc_name + " vs " + meter_name + " INL +-%f" % inl_span)
 
+# Print the result as CSV
+for i in range(0,len(diff_ppm)):
+    print("%0.2f,%f" % (ideal[i],diff_ppm[i]))
+
 fig, ax = plt.subplots()
 ax.plot(ideal, diff_ppm)
 ax.axis([-10.9, 10.9, -0.5, 0.5])
 ax.set(xlabel='Voltage', ylabel='INL ppm 10V',
        title='%s vs %s Linearity' % (mfc_name,meter_name))
 ax.grid()
-
-#plt.show()
-fig.savefig("test_hulk.png")
+fig.savefig(out_fn)
+print("Plot %s generated" % out_fn)
