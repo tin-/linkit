@@ -21,4 +21,20 @@ Multimeters were used in locked range at 12 V or 21 V (or 20 V for Datron 1281).
 * Keithley 2002M 7&frac12;-digit DMM freshly adjusted
 
 Data in this repository was collected and analyzed for an example how INL in sub-ppm level can be measured using conventional metrology equipment.
+Python script to collect sample points available [on xDevs here](https://xdevs.com/doc/xDevs.com/inlstudy/dmm9/linkit_rnd2001b.py)
 
+![Image](dmm9_inl.png)
+
+Script saves all measurement results into timestamped delimiter-separated text value file, such as [this](dcl_rnd_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv). As script is logging data it gives some test information like measured value for each device on the colorized terminal output:
+
+![Image](linlogger.png)
+
+Then analysis [linplot.py plotter script](linplot.py) together with [linkit2.conf config file](linkit2.conf) generate sorted and analyzed graphical chart set that displays each DMM performance from collected data samples. Two PNG images created with higher and smaller resolution for convinience. If everything working right, rendered charts look like this for base voltage range on each DMM:
+
+![chart](dcl_rnd_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
+
+And for lower range like 2.1 V:
+
+![chart](dcl_rnd_2v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
+
+Hope this helps!
