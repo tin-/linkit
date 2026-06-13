@@ -17,8 +17,8 @@ Multimeters were used in locked range at 12 V or 21 V (or 20 V for Datron 1281).
 * [Datron 1281 8&frac12;-digit DMM](https://xdevs.com/fix/d1281)
 * [Hewlett-Packard 34420A 7&frac12;-digit DVM/nanovoltmeter](https://xdevs.com/fix/hp34420a_u2/)
 * [Hewlett-Packard 34401A 6&frac12;-digit DMM](https://xdevs.com/pow/hp34401a_pow/)
-* Broken Keithley 2002 7&frac12;-digit DMM
-* Keithley 2002M 7&frac12;-digit DMM freshly adjusted
+* Broken Keithley 2001 7&frac12;-digit DMM
+* Keithley 2001M 7&frac12;-digit DMM freshly adjusted
 
 Data in this repository was collected and analyzed for an example how INL in sub-ppm level can be measured using conventional metrology equipment.
 Python script to collect sample points available [on xDevs here](https://xdevs.com/doc/xDevs.com/inlstudy/dmm9/linkit_rnd2001b.py)
