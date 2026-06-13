@@ -35,6 +35,6 @@ Then analysis [linplot.py plotter script](linplot.py) together with [linkit2.con
 
 And for lower range like 2.1 V:
 
-![chart](dcl_rnd_2v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
+![chart](dcl_rnd_2vdut_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
 
-Hope this helps!
+Hope this helps! Plotter often needs some tweaking for different ranges in multiple DMMs, but core functionality is all there and should be rather easy to modify to your needs after bit of experimenting.
