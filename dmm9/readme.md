@@ -31,10 +31,16 @@ Script saves all measurement results into timestamped delimiter-separated text v
 
 Then analysis [linplot.py plotter script](linplot.py) together with [linkit2.conf config file](linkit2.conf) generate sorted and analyzed graphical chart set that displays each DMM performance from collected data samples. Two PNG images created with higher and smaller resolution for convinience. If everything working right, rendered charts look like this for base voltage range on each DMM:
 
+Sweep on base ranges:
+
 ![chart](dcl_rnd_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
 
 And for lower range like 2.1 V:
 
 ![chart](dcl_rnd_2vdut_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
 
-Hope this helps! Plotter often needs some tweaking for different ranges in multiple DMMs, but core functionality is all there and should be rather easy to modify to your needs after bit of experimenting.
+And lowest range for DMMs:
+
+![chart](https://xdevs.com/doc/xDevs.com/CalFest_2026/k2001/dcl_rnd_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
+
+Hope this helps to get started! Plotter often needs some tweaking for different ranges in multiple DMMs, but core functionality is all there and should be rather easy to modify to your needs after bit of experimenting.
