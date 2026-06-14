@@ -41,6 +41,6 @@ And for lower range like 2.1 V:
 
 And lowest range for DMMs:
 
-![chart](https://xdevs.com/doc/xDevs.com/CalFest_2026/k2001/dcl_rnd_10v_h1_k2001_nplc10_soak8s_comp_samples-3_jun2026.dsv_1.png)
+![chart](https://xdevs.com/doc/xDevs.com/CalFest_2026/k2001/dcl_rnd_200mvdut_1v_h1_k2001_nplc10_soak8s_comp_samples-5_jun2026.dsv_1.png)
 
 Hope this helps to get started! Plotter often needs some tweaking for different ranges in multiple DMMs, but core functionality is all there and should be rather easy to modify to your needs after bit of experimenting.
